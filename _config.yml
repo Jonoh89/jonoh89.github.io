@@ -1,12 +1,20 @@
 # Site settings
-title: Your awesome title
-email: your-email@domain.com
-description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
+title: Jonathan Holmlund - Web and Mobile Developer
+email: jonoh89@gmail.com
+description: "Hi, I am a Software Developer with a keen interest in mobile and web development. I currently work for a software development company called Bede Gaming. In May 2012, I graduated from Teesside University, achieving a first class honours degree in Computer Science. Since University I have worked with a variety of technology but most recently specialised in JavaScript, iOS with objective-c and the Microsoft C# ASP.NET technology stack."
 baseurl: ""
-url: "http://yourdomain.com"
+url: "http://www.jonathanholmlund.co.uk"
 
 # Build settings
 markdown: kramdown
 permalink: pretty
 highlighter: pygments
-exclude: ['README.md','LICENSE']
+exclude: [
+  'README.md',
+  'LICENSE',
+  'package.json',
+  'gulpfile.js',
+  'bower.json',
+  'node_modules',
+  'bower_components'
+]

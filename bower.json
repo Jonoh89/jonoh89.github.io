@@ -1,0 +1,6 @@
+{
+  "name": "MyWebsite",
+  "devDependencies": {
+    "bootstrap": "~3.2.0"
+  }
+}
