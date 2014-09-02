@@ -1,0 +1,51 @@
+.intro {
+  background: url(../images/me_opt.jpg) no-repeat top center;
+  background-size: cover;
+  padding-top: 48px;
+  padding-bottom: 48px;
+
+  @media (min-width: 2000px) {
+    height: 850px;
+  }
+
+  @media (min-width: 1600px) and (max-width: 1999px) {
+    height: 700px;
+  }
+
+  @media (min-width: $screen-lg-min) and (max-width: 1599px) {
+    height: 500px;
+  }
+
+  @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+    height: 400px;
+  }
+  
+  @media (max-width: $screen-sm-max) {
+    height: 350px;
+  }
+
+  .intro-message {
+
+    padding-bottom: 10%;
+    padding-right: 40%;
+    text-align: center;
+
+    @media (min-width: 881px) {
+      padding-top: 3%;
+    }
+    
+    @media (max-width: 880px) {
+      display: none;
+    }
+
+
+    .intro-divider {
+      border-bottom: solid 2px #ffffff;
+      width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 10px;
+    }
+  }
+}
+
