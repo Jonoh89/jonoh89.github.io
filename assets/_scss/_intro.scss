@@ -3,6 +3,7 @@
   background-size: cover;
   padding-top: 48px;
   padding-bottom: 48px;
+  border-bottom: 5px solid $theme-color;
 
   @media (min-width: 2000px) {
     height: 850px;
@@ -40,7 +41,7 @@
 
 
     .intro-divider {
-      border-bottom: solid 2px #ffffff;
+      border-bottom: solid 2px $theme-color;
       width: 400px;
       margin-left: auto;
       margin-right: auto;
