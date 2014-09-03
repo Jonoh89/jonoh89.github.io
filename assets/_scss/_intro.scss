@@ -26,10 +26,13 @@
   }
 
   .intro-message {
-
     padding-bottom: 10%;
     padding-right: 40%;
     text-align: center;
+
+    h1, h3 {
+      @include text-shadow(1px 0px white);
+    }
 
     @media (min-width: 881px) {
       padding-top: 3%;
