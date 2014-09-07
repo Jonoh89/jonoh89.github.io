@@ -36,7 +36,7 @@ layout: home
     </div>
 </div>
 
-<div class="text-center">
+<div class="text-center hidden-sm hidden-xs">
     <a href="#welcome-text" class="scroll-to text-center">
         <i class="fa fa-arrow-circle-down scroll-down fa-4x fa-align-center"></i>
     </a>
@@ -85,17 +85,32 @@ layout: home
         </div>
     </div>
 
-  <h1>Posts</h1>
+</div>
 
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </li>
-    {% endfor %}
-  </ul>
+<div class="text-center hidden-sm hidden-xs">
+    <a href="#blog-text" class="scroll-to text-center">
+        <i class="fa fa-arrow-circle-down scroll-down fa-4x fa-align-center"></i>
+    </a>
+</div>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+<div class="container">
 
+    <div class="skills">
+        <h4 id="blog-text">
+            I have also started to blog!
+            <p class="lead">I want to share my experiences and let people know what I am working on. As I have become more experienced I find picking up new technologies fun and believe I can help other people learn while I storing what I learn a reminder for myself :).</p>
+        </h4>
+        <div class="row">
+            <ul class="posts">
+                {% for post in site.posts %}
+                <li>
+                    <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+                    <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+
+            <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+        </div>
+    </div>
 </div>
