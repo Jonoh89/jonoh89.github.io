@@ -1,9 +1,11 @@
 var gulp = require('gulp'),
     compass = require('gulp-compass'),
-    path = require('path');
+    path = require('path'),
+    imageResize = require('gulp-image-resize');
 
 var paths = {
-    scss: 'assets/_scss/*.scss'
+    scss: 'assets/_scss/*.scss',
+    postImages: 'assets/images/posts/*'
 };
 
 gulp.task('compass', function() {
@@ -18,4 +20,12 @@ gulp.task('compass', function() {
 
 gulp.task('watch', function() {
     gulp.watch(paths.scss, ['compass']);
+});
+
+gulp.task('resize-images', function () {
+    gulp.src(paths.postImages)
+        .pipe(imageResize({
+            height: 400
+        }))
+        .pipe(gulp.dest('assets/images/resizedPosts'))
 });
