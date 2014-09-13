@@ -25,7 +25,7 @@ gulp.task('watch', function() {
 gulp.task('resize-images', function () {
     gulp.src(paths.postImages)
         .pipe(imageResize({
-            height: 400
+            width: 128
         }))
         .pipe(gulp.dest('assets/images/resizedPosts'))
 });

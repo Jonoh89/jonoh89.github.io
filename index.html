@@ -95,51 +95,24 @@ layout: home
 
 <div class="container">
 
-    <div class="skills">
+    <div id="blog-intro">
         <h4 id="blog-text">
             I have also started to blog!
             <p class="lead">I want to share my experiences and let people know what I am working on. As I have become more experienced I find picking up new technologies fun and believe I can help other people learn while I storing what I learn a reminder for myself :).</p>
         </h4>
-        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-            </ol>
-
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner">
-                {% for post in site.posts %}
-                <div class="item active">
-                    <img class="center-block" src="{{ post.carouselImage | prepend: site.baseurl}}">
-                    <div class="carousel-caption">
-                        {{ post.date | date: "%b %-d, %Y" }}
-                        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-
-            <!-- Controls -->
-            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left"></span>
-            </a>
-            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right"></span>
-            </a>
-        </div>
         <div class="row">
-            <ul class="posts">
-                {% for post in site.posts %}
-                <li>
-                    <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-                    <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-                </li>
-                {% endfor %}
-            </ul>
-
-            <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+            {% for post in site.posts limit:8 %}
+            <div class="col-md-6 col-sm-12">
+                <a class="pull-left" href="{{ post.url | prepend: site.baseurl }}">
+                    <img class="media-object" src="{{ post.image128 | prepend: site.baseurl }}" alt="{{post.title}}">
+                </a>
+                <div class="media-body">
+                    <h4 class="media-heading">{{ post.title }} - <span class="hidden-xs">{{ post.date | date: "%b %-d, %Y" }}</span></h4>
+                    {{ post.description }}
+                </div>
+            </div>
+            {% endfor %}
         </div>
+        <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
     </div>
 </div>

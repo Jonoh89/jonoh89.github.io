@@ -2,7 +2,9 @@
 layout: post
 title:  "Welcome to my blog!"
 carouselImage: "assets/images/resizedPosts/jh-logo.jpg"
+image128: "assets/images/resizedPosts/jekyll.png"
 date:   2014-07-30 19:57:54
+description: My first blog post, what its about and why i'm doing it.
 categories: jekyll
 ---
 
