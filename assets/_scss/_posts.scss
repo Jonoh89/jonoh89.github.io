@@ -1,5 +1,20 @@
 #posts {
+
+  a.blog-title {
+    color: #ffffff;
+  }
+
   .post {
     margin-bottom: 100px;
+  }
+
+  footer {
+    padding-top: 5px;
+    color: #ffffff;
+    background-color: $theme-color-dark;
+
+    a {
+      color: $theme-color-light;
+    }
   }
 }

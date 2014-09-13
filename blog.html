@@ -7,13 +7,18 @@ layout: default
     <div class="post">
       <header class="jumbotron">
           <div class="container">
-              <h1>{{ post.title }}</h1>
+              <a class="blog-title" href="{{ post.url | prepend: site.baseurl }}"><h1>{{ post.title }}</h1></a>
               <p class="meta">{{ post.date | date: "%b %-d, %Y" }}{% if post.author %} • {{ post.author }}{% endif %}{% if post.meta %} • {{ post.meta }}{% endif %}</p>
           </div>
       </header>
       <article class="container">
           {{ post.content }}
       </article>
+      <footer>
+          <div class="container">
+            <p class="text-right">If you liked this then please share the permalink <a href="{{ post.url | prepend: site.baseurl }}">here!</a></p>
+          </div>
+      </footer>
     </div>
     {% endfor %}
 
