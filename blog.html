@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: blog
 ---
 
 <div id="posts">
@@ -9,6 +9,7 @@ layout: default
           <div class="container">
               <a class="blog-title" href="{{ post.url | prepend: site.baseurl }}"><h1>{{ post.title }}</h1></a>
               <p class="meta">{{ post.date | date: "%b %-d, %Y" }}{% if post.author %} • {{ post.author }}{% endif %}{% if post.meta %} • {{ post.meta }}{% endif %}</p>
+              <a class="btn btn-default" href="{{ post.url | prepend: site.baseurl }}#disqus_thread">Comments</a>
           </div>
       </header>
       <article class="container">
