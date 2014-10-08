@@ -1,14 +1,13 @@
 ---
 layout: post
 title:  "Grunt to Gulp - a few tips"
-carouselImage: "assets/images/resizedPosts/jh-logo.jpg"
-image128: "assets/images/resizedPosts/jekyll.png"
+image128: "assets/images/resizedPosts/Grunt-Vs-Gulp.png"
 date:   2014-07-30 19:57:54
 description: I recently worked on converting a Grunt build script at work to Gulp and here are some tips!
 categories: gulp
 ---
 
-![gulp]({{ site.baseUrl }}/assets/images/gulp-logo.png){: .center-block }
+![gulp]({{ site.baseUrl }}/assets/images/Grunt-Vs-Gulp.png){: .center-block }
 
 #Why move to gulp? 
 
@@ -68,13 +67,15 @@ module.exports = function(grunt) {
 
 Our task is going to be to recreate the functionality of this Gruntfile in Gulp.
 
+To follow along grab the completed code [here](https://github.com/Jonoh89/GruntToGulp) and clear the gulpfile.js. 
+
 ###Async
 
-So if we look at the default task we are checking for javascript errors with jshint, cleaning our distribution folder, concatenating the files into one and then performing minification to reduce the file size and obfuscate the code. 
+So if we look at the default grunt task we are checking for javascript errors with jshint, cleaning our distribution folder, concatenating the files into one and then performing minification to reduce the file size and obfuscate the code. 
 Running this task you will see it runs everything synchronously. 
 
 For demonstration purposes our task is going to be to perform these tasks in order. For example we don't want to clean or concatenate our code before the jshint task is finished and successful.
- Here is a the script. With gulp installed on your command line, save this following snippet as gulpfile.js and run gulp command in the same directory. 
+ With gulp installed on your command line, save this following snippet as gulpfile.js and run gulp command in the same directory. 
 
 {% highlight js %}
 var gulp = require('gulp'),
@@ -138,7 +139,7 @@ You may end up with multiple dependencies or need to group to cleanly group mult
 {% highlight js %}
 gulp.task('copy', ['copyFixtures', 'copySpecs', 'copyComponents', 'copyHelpers']);
 
-gulp.task('test, ['copy'], function () {...});
+gulp.task('test', ['copy'], function () {...});
 {% endhighlight %}
 
 In this example you will guarantee that all the copy tasks are ran before the test task is started.
@@ -175,16 +176,16 @@ This is because were not clearing the folder, so lets do that.
 The gulp-clean plugin will probably work but it is on the blacklist and it is recommended you use the standard node library 'del'. So require and use it.
 
 {% highlight js %}
-var del = require('del')
+var del = require('del');
 gulp.task('clean', function () {
     del('dist');
 });
 {% endhighlight %}
 
-If you take out the scripts task for a run you will see this is working, however in your log you will notice it completed in 2.67 ms. Now there isn't much to clean, but if anything takes that short a time its probably not set up correctly.
+If you take out the scripts task and add the clean task to the default task you will see this working, however in your log you will notice it completed in 2.67 ms. Now there isn't much to clean, but if anything takes that short a time its probably not set up correctly.
 Although this isn't a problem for this small example if your del task has a big job or if your using another plugin that takes a long time to load you will start to encounter problems.
 
-The issue is were not telling gulp when that task has finished. In a standard gulp task we return the gulp chain of commands and gulp will call this task finished when the final task is done and something is returned.
+The issue is that we are not telling gulp when that task has finished. In a standard gulp task we return the gulp chain of commands and gulp will call this task finished when the final task is done and something is returned.
 For using external plugins we must tell gulp manually when what were doing has finished. So change the delete function to this: 
 
 {% highlight js %}
@@ -214,4 +215,3 @@ gulp.task('test', ['lint'], function (cb) {
 
 
 I hope this has helped someone! Check out the finished code on githib: https://github.com/Jonoh89/GruntToGulp
-
