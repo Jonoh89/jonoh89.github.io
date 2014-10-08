@@ -7,7 +7,7 @@ description: I recently worked on converting a Grunt build script at work to Gul
 categories: gulp
 ---
 
-![gulp]({{ site.baseUrl }}/assets/images/Grunt-Vs-Gulp.png){: .center-block }
+![gulp]({{ site.baseUrl }}/assets/images/Grunt-Vs-Gulp.png){: .center-block.img-responsive  }
 
 #Why move to gulp? 
 

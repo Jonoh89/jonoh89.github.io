@@ -8,7 +8,7 @@ description: My first blog post, what its about and why i'm doing it.
 categories: jekyll
 ---
 
-![jekyll]({{ site.baseUrl }}/assets/images/jekyll-logo.png){: .center-block }
+![jekyll]({{ site.baseUrl }}/assets/images/jekyll-logo.png){: .center-block.img-responsive }
 
 #Welcome! This is my first post on my new blog using [jekyll]. 
 
