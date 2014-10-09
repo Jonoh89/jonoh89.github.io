@@ -215,4 +215,4 @@ gulp.task('test', ['lint'], function (cb) {
 {% endhighlight %}
 
 
-I hope this has helped you! Check out the finished code on github: https://github.com/Jonoh89/GruntToGulp
+I hope this has helped you! Check out the finished code on [github](https://github.com/Jonoh89/GruntToGulp).

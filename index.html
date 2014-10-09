@@ -99,7 +99,7 @@ layout: home
             <p class="lead">I would like to share my experiences and let you know what I am working on. As I have gained more experience, I find fun in picking up new technologies and believe I can help other people learn whilst creating a reminder for myself :).</p>
         </h4>
         <div class="row">
-            {% for post in site.posts reversed limit:8 %}
+            {% for post in site.posts limit:8 %}
             <div class="col-md-6 col-sm-12">
                 <a href="{{ post.url | prepend: site.baseurl }}">
                     <img class="media-object pull-left" src="{{ post.image128 | prepend: site.baseurl }}" alt="{{post.title}}">
