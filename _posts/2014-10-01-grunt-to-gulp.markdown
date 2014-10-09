@@ -2,8 +2,8 @@
 layout: post
 title:  "Grunt to Gulp - a few tips"
 image128: "assets/images/resizedPosts/Grunt-Vs-Gulp.png"
-date:   2014-07-30 19:57:54
-description: I recently worked on converting a Grunt build script at work to Gulp and here are some tips!
+date:   2014-09-22 19:57:54
+description: I recently converted a Grunt build script to Gulp - here are some tips!
 categories: gulp
 ---
 
