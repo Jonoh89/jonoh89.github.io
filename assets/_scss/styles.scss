@@ -1,9 +1,9 @@
 @import "my-variables";
-@import "../../bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap-compass";
+@import "../libs/bootstrap-sass-official/assets/stylesheets/_bootstrap-compass";
 @import "bootstrap-variables";
-@import "../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap";
+@import "../libs/bootstrap-sass-official/assets/stylesheets/bootstrap";
 @import "compass/css3";
-@import "../../bower_components/font-awesome/scss/font-awesome.scss";
+@import "../libs/font-awesome/scss/font-awesome.scss";
 @import "page";
 @import "intro";
 @import "blog-intro";
@@ -11,3 +11,4 @@
 @import "skills";
 @import "posts";
 @import "post";
+@import "pygments";

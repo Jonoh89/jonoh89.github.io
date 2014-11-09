@@ -57,3 +57,12 @@ i.scroll-down {
   margin-left: auto;
   margin-right: auto;
 }
+
+.blog-post {
+  height: 128px;
+  margin: 10px 0;
+
+  .media-body {
+    padding-left: 10px;
+  }
+}
