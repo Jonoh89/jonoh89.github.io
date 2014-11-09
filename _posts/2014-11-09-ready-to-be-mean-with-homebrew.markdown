@@ -3,7 +3,7 @@ layout: post
 title:  "Ready to be MEAN! With Homebrew."
 image128: "assets/images/resizedPosts/homebrew.jpg"
 date:   2014-11-09 12:00:00
-description: Installed a fresh copy of Yosemite - a quick way to get back running with Homebrew.
+description: Installed a fresh copy of Yosemite - a quick way to get back running with Homebrew
 categories: mean homebrew
 ---
 
