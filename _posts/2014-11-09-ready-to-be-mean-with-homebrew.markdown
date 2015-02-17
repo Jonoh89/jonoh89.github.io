@@ -15,7 +15,7 @@ Homebrew is a package manager. It simplifies the installation of software on the
 
 #What is MEAN?
 
-Each letter of mean stands for the 4 main technologies used to build fullstack applications where the front end AND backend is written in JavaScript.
+Each letter of mean stands for the 4 main technologies used to build fullstack applications where the frontend AND backend is written in JavaScript.
 The technologies are:
 
 M - MongoDB: MongoDB a open-source NoSQL database.
