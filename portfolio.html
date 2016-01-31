@@ -1,0 +1,138 @@
+---
+layout: home
+---
+
+<div id="portfolio" class="container">
+
+  <h1>Portfolio</h1>
+
+  <p>Here is a list of things I have been working on</p>
+
+  <article class="slots">
+    <h2>Slots Games</h2>
+
+    <p>At Bede Gaming I have worked on making HTML5 Canvas Slot Games. I have worked from the server game logic to making the reels spin on the client.</p>
+
+
+    <section class="pictures">
+      <img src="{{ '/assets/images/slots-game.jpg' | prepend: site.baseUrl}}" class="center-block img-responsive"/>
+    </section>
+
+    <section class="info">
+
+      <p>
+        For the client we use Pixi.js, a WebGL renderer with canvas fallback. This means we can share most of our codebase for desktop and mobile games.
+        We use a lot of the backbone ecosystem to help modularise parts of the page into separate repositories, deal with preloading images and neatly deal with removing globals.
+      </p>
+
+      <p>
+        The client is written in 100% es6 using browserify and babel to transform our many modules into the slots game.
+        I have worked on many automation tools using gulp to sprite our images, convert and sprite our sounds and generate our css from sass.
+      </p>
+
+      <p>
+        The server is basic node server with the abilitiy to validate bets and play through spins returnign the game state to the client.
+      </p>
+    </section>
+  </article>
+
+  <article class="bingo">
+    <h2>Bingo</h2>
+
+    <p>At Bede Gaming I have worked on making multilayer HTML5 Bingo clent. I have worked on the fully modular theme-able client.</p>
+
+    <section class="pictures">
+      <img src="{{ '/assets/images/bingo.png' | prepend: site.baseUrl}}" class="center-block img-responsive"/>
+    </section>
+
+    <section class="info">
+
+      <p>
+        For the client we use Marionette.js to communicate with a bingo server. The client reacts to bingo server events and allows the user to chat and
+        play multilayer bingo games. During my time on this project I helped speed our builds up drastically by improving our flow converting us to use browserify and gulp
+        rather than AMD and grunt which could not be ran asynchronously.
+      </p>
+
+    </section>
+  </article>
+
+  <article class="thomson-tmc">
+    <h2>Thomson TMC</h2>
+
+    <p>At Penrillian I worked on Thomsons Travel Money Card application.</p>
+
+    <section class="pictures">
+      <img src="{{ '/assets/images/thomson-app.jpg' | prepend: site.baseUrl}}" class="center-block img-responsive"/>
+    </section>
+
+    <section class="info">
+
+      <p>
+        The App allows you to check your balance and recent transactions of your Thomson travel money card. Due to working with money, this app was
+        highly security tested and worked with secure APIs;
+       </p>
+
+      <p>
+        This was a native app created in objective-c. It used <a href="http://www.sensiblecocoa.com/">sensible table view</a> for easy mapping
+        and generation of tables.
+      </p>
+
+    </section>
+  </article>
+
+  <article class="web-ui">
+    <h2>Vodafone mobile wifi/ mobile dongle device interface</h2>
+
+    <p>At Penrillian I worked Vodafones mobile internet devices web interface.</p>
+
+    <section class="pictures">
+      <img src="{{ '/assets/images/web-ui.png' | prepend: site.baseUrl}}" class="center-block img-responsive"/>
+    </section>
+
+    <section class="info">
+
+      <p>
+        At my time on the project Vodafone had two kinds of mobile internet devices, those were dongles you plugged into your computer
+        and mobile wifi devices you carried around and connected your various wifi enabled devices. Both of these shared the same user interface
+        that we created.
+      </p>
+
+      <p>
+        The devies this UI ran on had to run around the world and may be that users first and only access to the internet
+        so (unfortunately for everyone) this added the requirement that it strictly needed to run on any and every browser
+        back to Internet Explorer 6. Due to this the website was build using basic technologies and techniques, jQuery being the only
+        framework we used.
+      </p>
+
+      <p>
+        For this project I also worked on a automated testing infrastructure that ran a suite of integration tests on most browsers
+        including all internet explorers. This was written in the language Groovy and used selenium to automate the browser interaction.
+      </p>
+
+    </section>
+  </article>
+
+  <article class="the-happy-appy">
+    <h2>The Happy Appy</h2>
+
+    <p>At home I worked created a native iOS app with a friend.</p>
+
+    <section class="pictures">
+      <img src="{{ '/assets/images/the-happy-appy.jpg' | prepend: site.baseUrl}}" class="center-block img-responsive"/>
+    </section>
+
+    <section class="info">
+
+      <p>
+        As a side project with a friend I created a simple app that gave you a quote for whatever negative emotion you are feeling.
+        The quotes were stored on parse.com so the users always had the latest quotes.
+      </p>
+
+      <p>
+        This was created in objective-c using no add-ons.
+      </p>
+
+    </section>
+  </article>
+
+</div>

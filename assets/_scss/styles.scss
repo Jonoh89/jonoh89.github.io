@@ -1,7 +1,7 @@
 @import "my-variables";
-@import "../libs/bootstrap-sass-official/assets/stylesheets/_bootstrap-compass";
+@import "../libs/bootstrap-sass-official/assets/stylesheets/_bootstrap-compass.scss";
 @import "bootstrap-variables";
-@import "../libs/bootstrap-sass-official/assets/stylesheets/bootstrap";
+@import "../libs/bootstrap-sass-official/assets/stylesheets/bootstrap.scss";
 @import "compass/css3";
 @import "../libs/font-awesome/scss/font-awesome.scss";
 @import "page";
@@ -11,4 +11,5 @@
 @import "skills";
 @import "posts";
 @import "post";
+@import "portfolio";
 @import "pygments";

@@ -1,6 +1,19 @@
 MyWebsite
 =========
 
+##
+
+Setup
+
+```
+gem install jekyll
+npm install
+bower install
+gem install bundler
+bundle install
+```
+
+
 Development:
 
 To run and build when any change happens use:
