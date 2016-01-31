@@ -3,7 +3,6 @@ _site
 bower_components
 node_modules
 .sass-cache
-assets/css
 .divshot-cache/deploy/03/89/e8
 assets/libs
 .divshot-cache
