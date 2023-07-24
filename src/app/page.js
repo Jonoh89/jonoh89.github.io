@@ -16,14 +16,14 @@ export default function Home() {
                     </a>
                 </section>
             </nav>
-            <main className="flex items-center justify-between md:p-10 flex-col lg:flex-row">
+            <main className="flex items-start justify-between md:p-10 flex-col flex-1 lg:flex-row">
                 <section className="p-12">
                     <h1 className="text-8xl min-w-fit">Hi</h1>
                     <p>{"I'm Jonathan, a developer who specialises in Web Frontend / React Native."}</p>
                     <p>With over 10 years of experience I enjoy making complex applications with simple, maintainable,
                         testable code.</p>
                 </section>
-                <section className="p-12 min-w-fit lg:w-full">
+                <section className="p-12 min-w-fit lg:items-start">
                     <h2>Recent work:</h2>
                     <br />
                     <ul>
